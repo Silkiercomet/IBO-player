@@ -1,7 +1,7 @@
 import style from "./styles/details.module.css"
 const Details = () => {
     return (
-        <section>
+        <section className={style.details}>
             <div className={style.details_flex}>
                 <div>
                     <h4><span className={style.red}>Guardians of Content: </span>Unveiling Media Player's Parental Power</h4>
@@ -42,7 +42,9 @@ const Details = () => {
                     <h4 className={style.red}>It's a great day to Discover</h4>
                     <p>This service is your one-stop shop for entertainment. Binge Netflix originals, develop Prime Video hits, and catch the electrifying buzz of live streams - all in one click. From blockbuster movies to nail-biting sports, it's a smorgasbord of endless variety, ready to ignite your screen time.</p>
                 </div>
-                <img src="/assets/ibo-tv-mockup-CpDJQBsu.png" alt="ibo tv mockup"/>
+                <div className={style.details_last_img}>
+                    <img src="/assets/ibo-tv-mockup-CpDJQBsu.png" alt="ibo tv mockup"/>
+                </div>
             </div>
         </section>
     );
