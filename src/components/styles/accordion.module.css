@@ -1,0 +1,53 @@
+.faq h4{
+    text-align: center;
+}
+.faq_accordion{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.accordionItem:hover, .accordionItem.active{
+    border-color: rgb(191, 35, 46, 1);
+}
+
+.accordionItem{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: 2px solid rgba(191, 35, 46, 0.3);
+    border-radius: 15px;
+    max-height: 100%;
+    transition: 300ms ease-in-out;
+
+    h4{
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        line-height: 1.5rem;
+    }
+    div{
+        display: grid;
+        grid-template-rows: 0fr;
+        height: 0;
+        transform: translateY(20px);
+        transition: 300ms ease-in-out;
+
+        p{
+            font-size: 0.9rem;
+            overflow: hidden;
+        }
+    }
+    div.active{
+        height: 100%;
+        grid-template-rows: 1fr;
+        transform: translateY(0px);
+        margin-top: 1rem;
+}
+}
+@media screen and (width < 608px) {
+    .accordionItem h4{
+    margin-inline: auto;
+    }
+}

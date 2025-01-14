@@ -1,7 +1,12 @@
 .red{
     color: var(--red);
 }
-
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+    margin: 0;
+}
 .details_flex{
     display: flex;
     gap: 2rem;
@@ -68,10 +73,22 @@
 }
 
 .details_last{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    div{
+       display: flex;
+       flex-direction: column;
+       gap: 2rem;
+    }
+
+}
+.details_last_img{
+    position: relative;
 
 }
 @media screen and (width < 1258px){
-    .details_grid{
+    .details_grid, .details_last{
         grid-template-columns: 1fr;
     }
     .details_grid_container{
