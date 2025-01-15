@@ -1,0 +1,100 @@
+.footer{
+    background-color: #000;
+    color: #e5e7eb;
+}
+.footer_lower, .footer_upper{
+    max-width: 1560px;
+    padding-inline: 1rem;
+    margin: 0 60px;
+}
+.footer_upper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_upper div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    span{
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 300ms ease-in-out;
+        &:hover{
+            text-decoration: underline;
+            color: var(--red);
+        }
+    }
+}
+.footer_upper div:nth-child(2) {
+    display: grid;
+    place-items: center;
+    img{
+        max-width: 100px;
+
+    }
+}
+.footer_upper div:nth-child(3){
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    a{
+        text-decoration: none;
+        color: inherit;
+        &:first-of-type{
+            margin-right: 1rem;
+            margin-left: auto;
+        }
+        svg{
+           transition: 300ms ease-in-out;
+           &:hover{
+               fill: var(--red);
+           }
+        }
+    }
+}
+
+.footer_lower{
+    padding-block: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p a{
+        text-decoration: none;
+        color: inherit;
+        transition: 0.3s ease-in-out;
+        &:hover{
+            color: var(--red);
+        }
+    }
+}
+@media screen and (width < 800px){
+    .footer_lower, .footer_upper{
+
+        margin: 0 30px;
+    }
+    .footer_upper{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr .5fr;
+    }
+    .footer_upper div:nth-child(2){
+        order: 1;
+    }
+    .footer_upper div:nth-child(1){
+        order: 2;
+        margin-inline:auto ;
+        text-align: center;
+    }
+    .footer_upper div:nth-child(3){
+        order: 3;
+        margin-inline:auto ;
+
+    }
+    .footer_lower{
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+}
