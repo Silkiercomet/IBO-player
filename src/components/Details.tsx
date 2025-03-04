@@ -10,7 +10,7 @@ const Details = () => {
                         Parental Controls serve as your ally, providing confidence and control in the digital
                         landscape.</p>
                 </div>
-                <img src="/assets/guardians.png" alt="we are guardians of content"/>
+                <img src="/assets/guardians.webp" alt="we are guardians of content"/>
             </div>
             <div className={style.details_grid}>
                 <div className={style.details_grid_container}>
